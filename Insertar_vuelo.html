@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuelos</title>
+</head>
+<body>
+    <form action="Insertar_vuelo.php" method="post" onsubmit="return validarVuelo();">
+        Origen: <input type="text" name="origen" required><br>
+        Destino: <input type="text" name="destino" required><br>
+        Fecha: <input type="date" name="fecha" required><br>
+        Plazas disponibles: <input type="number" name="plazas" required><br>
+        Precio: <input type="number" name="precio" required><br>
+        <input type="submit" value="Agregar vuelo">
+    </form>
+    <script>
+        function validarVuelo() {
+            return true;
+        }
+    </script>
+</body>
+</html>
