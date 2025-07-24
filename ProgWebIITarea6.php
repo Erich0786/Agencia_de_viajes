@@ -6,10 +6,8 @@
     <title>Formulario de clientes</title>
     <style>
         /*Reglas de CSS */
-        /*Aquí se pueden incluir tus estilos CSS*/
     </style>
     <script>
-        /*Funciones JavaScript*/
         /*Aquí puedes incluir validaciones JavaScript*/
         function validar() {
             let nombre = document.getElementById('nombre').value;
@@ -38,8 +36,8 @@
 
 <?php
 $_servidor = 'mysql:host=localhost;dbname=comercio';
-$usuario = 'nombre_de_usuario';//usuario dba en caso root;
-$password = 'contraseña';//si no tiene contraseña, se deja vacío;
+$usuario = 'nombre_de_usuario';
+$password = 'contraseña';
 try {
     $conn = new PDO($servidor, $usuario, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
