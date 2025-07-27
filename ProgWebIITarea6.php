@@ -8,7 +8,7 @@
         /*Reglas de CSS */
     </style>
     <script>
-       function validarNombreFormato() {
+    function validarNombreFormato() {
     let nombre = document.getElementById('nombre').value.trim();
     let formatoValido = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
 
@@ -25,6 +25,7 @@
 <body>
     <h2>Formulario de Clientes</h2>
     <form action="procesar_datos.php" method="post" onsubmit="return validar() && validarNombreFormato()">
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <br>
