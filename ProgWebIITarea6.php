@@ -8,21 +8,24 @@
         /*Reglas de CSS */
     </style>
     <script>
-        /*Aquí puedes incluir validaciones JavaScript*/
-        function validar() {
-            let nombre = document.getElementById('nombre').value;
-            let email = document.getElementById('email').value;
-            if (nombre === " || email ===") {
-                alert('Por favor completa todos los campos');
-                return false;
-            }
-            return true;
-        }
+    function validarNombreFormato() {
+    let nombre = document.getElementById('nombre').value.trim();
+    let formatoValido = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+
+    if (!formatoValido.test(nombre)) {
+        alert('El nombre solo debe contener letras y espacios.');
+        return false;
+    }
+    return true;
+}
+
+        
     </script>
 </head>
 <body>
     <h2>Formulario de Clientes</h2>
-    <form action="procesar_datos.php" method="post" onsubmit="return validad()">
+    <form action="procesar_datos.php" method="post" onsubmit="return validar() && validarNombreFormato()">
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <br>
